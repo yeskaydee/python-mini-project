@@ -14,10 +14,10 @@ server.ehlo()
 with open('password.txt' , 'r') as f:
     password = f.read()
 
-server.login('itisfortestingonly9@gmail.com',password)
+server.login('itisfortestingonly@gmail.com',password)
 
 msg = MIMEMultipart
-msg['From']='Santosh-using-automation'
+msg['From']='yeskaydee-using-automation'
 msg['To'] = 'email@gmail'
 msg['Subject'] = 'Just a test'
 
@@ -37,4 +37,4 @@ p.add_header('Content-Disposition',f'attachment;filename = {filename}')
 msg.attach(p)
 
 text = msg.as_string()
-server.sendmail('itisfortestingonly9@gmail.com','email@gmail',text)
+server.sendmail('itisfortestingonly@gmail.com','email@gmail',text)
